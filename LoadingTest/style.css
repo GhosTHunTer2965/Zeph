@@ -1,0 +1,97 @@
+/* ===== Global Setup ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0b1220;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* ===== Logo Text ===== */
+.logo-text {
+    font-family: "Righteous", sans-serif;
+    font-size: 6rem;
+    color: #fff;
+    position: relative;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.letter {
+    display: inline-block;
+    transition: font-family 0.05s ease;
+}
+
+.letter[data-letter="O"] {
+    color: #00baff;
+}
+
+/* Font classes for rapid switching */
+.font-righteous { font-family: "Righteous", sans-serif; }
+.font-arial { font-family: Arial, sans-serif; }
+.font-times { font-family: "Times New Roman", serif; }
+.font-courier { font-family: "Courier New", monospace; }
+.font-helvetica { font-family: Helvetica, sans-serif; }
+.font-georgia { font-family: Georgia, serif; }
+.font-verdana { font-family: Verdana, sans-serif; }
+.font-trebuchet { font-family: "Trebuchet MS", sans-serif; }
+.font-impact { font-family: Impact, sans-serif; }
+.font-comic { font-family: "Comic Sans MS", cursive; }
+
+.loading-o {
+    display: inline-block;
+    color: #00baff;
+    animation: flicker 0.1s infinite;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+}
+
+/* ===== Custom O Image ===== */
+.logo-image {
+    position: absolute;
+    width: 6rem;
+    opacity: 0;
+    transform: scale(0.8);
+    filter: drop-shadow(0 0 0px #00baff);
+}
+
+/* ===== Glow Animation ===== */
+.glow {
+    animation: glow 0.8s ease-out forwards;
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+        filter: drop-shadow(0 0 10px #00c3ff);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        filter: drop-shadow(0 0 40px #00c3ff);
+    }
+}
+
+/* ===== Progress Bar ===== */
+.progress-bar {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 5px;
+    width: 0%;
+    background: linear-gradient(90deg, #00c3ff, #007fff);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00c3ff;
+}
